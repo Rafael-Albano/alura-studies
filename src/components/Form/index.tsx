@@ -1,12 +1,13 @@
 import { Component, ReactNode } from "react";
 import { Button } from "../Button";
+import './style.scss';
 
 // CLASS COMPONENTS.
 class Form extends Component {
     render(): ReactNode {
         return(
-            <form>
-                <div>
+            <form className="novaTarefa">
+                <div className="inputContainer">
                     <label htmlFor="schedule">
                         Add a new study
                     </label>
@@ -17,7 +18,7 @@ class Form extends Component {
                         placeholder={"what do you want to study"}
                     />
                 </div>
-                <div>
+                <div className="inputContainer">
                     <label htmlFor="time">
                         Time
                     </label>
