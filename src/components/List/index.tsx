@@ -23,6 +23,7 @@ const List = () => {
     return(
         
         <aside className={style.listaTarefas}>
+            <h2> Studys of day </h2>
             <ul>
                 {
                     schedules.map((item, index) => (
