@@ -1,14 +1,16 @@
 import React from 'react';
 import { Form } from '../components/Form';
 import { List } from '../components/List';
+import { StopWatch } from '../components/Stopwatch';
 import style from './App.module.scss'
 
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className={style.AppStyle}>
       <Form/>
       <List/>
+      <StopWatch/>
     </div>
   );
 }
