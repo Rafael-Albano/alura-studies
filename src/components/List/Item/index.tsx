@@ -1,14 +1,14 @@
 import style from '../List.module.scss';
 
-interface ISchedule {
-	schedule: string;
+interface ITask {
+	task: string;
 	time: string;
 }
 
-function Item({ schedule, time }: ISchedule) {
+function Item({ task, time }: ITask) {
 	return(
 		<li className={style.item}>
-			<h3>{schedule}</h3>
+			<h3>{task}</h3>
 			<span>{time}</span>
 		</li>
 	)

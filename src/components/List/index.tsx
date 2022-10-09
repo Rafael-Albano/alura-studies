@@ -1,33 +1,18 @@
-import React from "react"
 import { Item } from "./Item";
 import style from './List.module.scss';
 
-const List = () => {
-	const schedules = [
-		{
-				schedule: 'React',
-				time: '02:00:00'
-		},
-		{
-				schedule: 'Vue',
-				time: '01:00:00'
-		},
-		{
-				schedule: 'Angular',
-				time: '05:00:00'
-		},
-		{
-				schedule: 'Svelt',
-				time: '01:00:00'
-		},
-	]
+type Task = {
+	task: string;
+	time: string;
+}
+
+const List = ({ task }: {task: Task[]}) => {
 	return(
-			
 		<aside className={style.listaTarefas}>
-			<h2> Studys of day </h2>
+			<h2>Studys of day</h2>
 			<ul>
 				{
-					schedules.map((item, index) => (
+					task.map((item, index) => (
 							<Item
 								key={index}
 								{...item}
@@ -40,3 +25,4 @@ const List = () => {
 }
 
 export { List };
+export type { Task };
